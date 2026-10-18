@@ -1,0 +1,10 @@
+services:
+  greenplum:
+    image: sergeyosechkin/greenplum:latest
+    container_name: greenplum
+    tty: true
+    stdin_open: true
+    ports: ["5433:5432"]
+    volumes:
+      - ../dv/data:/import
+      - ../dv/sql:/sql
